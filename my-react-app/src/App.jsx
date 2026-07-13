@@ -19,13 +19,29 @@
 
 // 2. card components//
 
-import Card from "./Card.jsx";
+// import Card from "./Card.jsx";
+
+// function App() {
+//   return (
+//     <>
+//       <Card />;
+//       <Card />;
+//       <Card />;
+//       <Card />;
+//     </>
+//   );
+// }
+
+// export default App;
+
+// CSS styles
+
+import Button from "./Button.jsx";
 
 function App() {
   return (
     <>
-      <Card />;
-      <Card />;
+      <Button />
     </>
   );
 }

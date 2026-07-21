@@ -64,14 +64,18 @@
 
 import React, { useEffect, useState } from "react";
 import "./App.css";
-
+import axios from "axios";
 const App = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
-      .then((res) => res.json())
-      .then((data) => setProducts(data));
+    // fetch("https://fakestoreapi.com/products")
+    //   .then((res) => res.json())
+    //   .then((data) => setProducts(data));
+
+    axios.get("https://fakestoreapi.com/products").then((res) => {
+      setProducts(res.data);
+    });
   }, []);
 
   return (
